@@ -8,9 +8,8 @@ const HeroSection = () => {
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const scrollToCourses = () => {
-    const element = document.getElementById('cursos');
-    element?.scrollIntoView({ behavior: 'smooth' });
+  const openWhatsApp = () => {
+    window.open('https://wa.me/5551985752021', '_blank');
   };
 
   return (
@@ -65,10 +64,10 @@ const HeroSection = () => {
             size="lg" 
             variant="outline" 
             className="text-lg px-8 py-6 border-white/30 text-white hover:bg-white/10 hover:text-white"
-            onClick={scrollToCourses}
+            onClick={openWhatsApp}
           >
             <Music className="w-5 h-5 mr-2" />
-            Conheça Nossos Cursos
+            Falar com a Escola
           </Button>
         </div>
 

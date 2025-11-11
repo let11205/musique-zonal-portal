@@ -15,6 +15,11 @@ const Navigation = () => {
 
   const isActive = (href: string) => location.pathname === href;
 
+  const scrollToForm = () => {
+    const element = document.getElementById('agendamento');
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,7 +45,7 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
-            <Button className="pulse-gold">
+            <Button className="pulse-gold" onClick={scrollToForm}>
               <Music className="w-4 h-4 mr-2" />
               Agendar Aula
             </Button>
@@ -75,7 +80,7 @@ const Navigation = () => {
                   </Link>
                 ))}
                 
-                <Button className="mt-4 pulse-gold">
+                <Button className="mt-4 pulse-gold" onClick={scrollToForm}>
                   <Music className="w-4 h-4 mr-2" />
                   Agendar Aula
                 </Button>
